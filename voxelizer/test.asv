@@ -1,0 +1,16 @@
+neki = 'data/results/targets';
+kurac = 400;
+
+targets = zeros(kurac, 1);
+for i = 0:1:kurac
+    target = load(join([neki, '/', string(i), '.mat'], ''));
+    target = target.target;
+    targets(i+1) = target;
+end
+
+indices = find(targets == 1);
+for i = 1:1:size(indices, 1)
+    idx = indices(i) - 1;
+    load()
+    
+end

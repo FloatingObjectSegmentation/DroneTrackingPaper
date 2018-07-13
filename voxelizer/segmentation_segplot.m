@@ -1,11 +1,11 @@
 % read the point cloud
-datafolder = 'scans/scans/Scan';
+datafolder = 'data/scans/Scan';
 datasuffix = '00000.pcd';
-ptCloud = pcread(join([datafolder, '4', datasuffix]));
+ptCloud = pcread(join([datafolder, '2', datasuffix]));
 
 % read the ground truth matrices
-X = getfield(load('data/4data.mat'), 'data');
-y = getfield(load('data/4classes.mat'), 'classes');
+X = getfield(load('data/data_out/2data.mat'), 'data');
+y = getfield(load('data/data_out/2classes.mat'), 'classes');
 
 ClusterIndices = RBNN(ptCloud.Location, 4.0, 5);
 
